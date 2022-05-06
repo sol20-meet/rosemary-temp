@@ -35,7 +35,7 @@ def add():
 @app.route('/view' , methods=['GET' , 'POST'])
 def view():
 	if request.method == 'GET':
-		a = query_all()
+		a = query_res()
 		return render_template('view.html' , Reservations = a)
 	else:
 		objId = request.form['deleteBtn']

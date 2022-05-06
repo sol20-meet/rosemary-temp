@@ -19,7 +19,6 @@
 		a:hover{
 			border-bottom-color:rgba(255,255,255,0);
 		}
-
 		#btndlt {text-decoration: none;}
 		
 		#btndlt:visited
@@ -27,6 +26,11 @@
 		text-decoration: none !important;
 		}
 			
+		td{
+			color :#000000 !important;
+			font-size: 25px !important;
+			font-weight: 500 !important;
+		}
 		
 		</style>
 		<title>Rosemary - View Reservations</title>
@@ -52,10 +56,9 @@
 				<th>Location</th>
 				<th>Phone Number</th>
 				<th>Waiter Name</th>
-				<th>Is Coming?</th>
 				<th>Is Eating?</th>
 				<th>Closed Menu?</th>
-				<th>Has Arrived?</th>
+				<th>Is Coming?</th>
 				<th>Notes</th>
 				<th>Options</th>
 			</tr>
@@ -68,23 +71,13 @@
 				<td>{{Reservation['location']}}</td>
 				<td>{{Reservation['phone_num']}}</td>
 				<td>{{Reservation['waiter_name']}}</td>
-				<td>{{Reservation['is_coming']}}</td>
 				<td>{{Reservation['is_food']}}</td>
 				<td>{{Reservation['closed_menu']}}</td>
 				<td><input type="checkbox" id="isComingBox" name="{{Reservation['id']}}" value="{{Reservation['id']}}"> <label for="isComingBox">Coming?</label></td>
-				<!-- <script type="text/javascript">
-					var y = document.getElementById('isComingBox');
-					y.addEventListener('change', function(){
-						window.location.href = '/view' + y.value; //relative to domain
-					}
-						);
-
-
-				</script> -->
 				<td class="notesTh">{{Reservation['notes']}}</td>
 				<td><form method="post"><button id="btndlt" value="{{Reservation.id}}" class="button-6" name="deleteBtn" type="submit"></form><p class="btnTxt">Delete</p></button>
-<!-- 				<a href="/edit"><button id="btnedit" class="button-6" name="editBtn" type="submit"><p class="btnTxt">Edit</p></button></a></td>
- -->			</tr>
+				<!-- 				<a href="/edit"><button id="btnedit" class="button-6" name="editBtn" type="submit"><p class="btnTxt">Edit</p></button></a></td>
+			-->			</tr>
 			{%endfor%}
 		</table>
 	</section>

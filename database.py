@@ -33,5 +33,7 @@ def query_all():
 	Reservations = session.query(Reservation).all()
 	return Reservations
 
-
+def query_res():
+	Reservations1 = session.query(Reservation).order_by(Reservation.reserve_day).order_by(Reservation.reserve_time).all()
+	return Reservations1
 
