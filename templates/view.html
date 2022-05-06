@@ -71,7 +71,16 @@
 				<td>{{Reservation['is_coming']}}</td>
 				<td>{{Reservation['is_food']}}</td>
 				<td>{{Reservation['closed_menu']}}</td>
-				<td>{{Reservation['has_arrived']}}</td>
+				<td><input type="checkbox" id="isComingBox" name="{{Reservation['id']}}" value="{{Reservation['id']}}"> <label for="isComingBox">Coming?</label></td>
+				<!-- <script type="text/javascript">
+					var y = document.getElementById('isComingBox');
+					y.addEventListener('change', function(){
+						window.location.href = '/view' + y.value; //relative to domain
+					}
+						);
+
+
+				</script> -->
 				<td class="notesTh">{{Reservation['notes']}}</td>
 				<td><form method="post"><button id="btndlt" value="{{Reservation.id}}" class="button-6" name="deleteBtn" type="submit"></form><p class="btnTxt">Delete</p></button>
 <!-- 				<a href="/edit"><button id="btnedit" class="button-6" name="editBtn" type="submit"><p class="btnTxt">Edit</p></button></a></td>

@@ -49,6 +49,19 @@ def view():
 		session.commit()
 		return redirect('/')
 
+
+
+# @app.route('/view/<int:res_id>' , methods=['GET' , 'POST'])
+# def view1():
+# 	if request.method == 'GET':
+# 		reservation = session.query(Reservation).filter(Reservation.id == res_id).first()
+# 		reservation.isComing = True
+# 		session.commit()
+# 		return redirect('/view')
+# 	else:
+# 		redirect('/add')
+
+
 # @app.route('/edit' , methods=['GET' , 'POST'])
 # def edit():
 # 	if request.methods == 'GET' :
